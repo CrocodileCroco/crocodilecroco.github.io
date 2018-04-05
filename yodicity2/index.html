@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>OpenYodicity</title>
+<meta charset="UTF-8">
+<style>
+div.centr {
+    text-align: center;
+}
+
+div.dafuq {
+    font-size: 3px;
+}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+<style>
+body{
+  font-family: 'Roboto', sans-serif;
+  }
+</style>
+<style>
+div.oblijay {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+
+
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body bgcolor="#d3d3d3"><br><br><br><br>
+<div class="centr"><h1>Yodicity vous manque?</h1></div>
+<br><div class="centr">La Team Yodicity <b><h2><div class="oblijay">Officielle</div></h2></b> travaille sur un clone officiel de yodicity qui est open source !
+<br>Vous pourrez enfin rejouer au <b>bon vieux yodicity de l'époque</b>
+<br>Soyez le premier a avoir la beta privée et la couronne ! (mettez votre mail) : <input type="text" name="mail"><br><button onclick="location.href='https://www.youtube.com/watch?v=fVQ2vd4L2yk'" type="button">S'abonner a la newsletter</button>
+<br><div class="dafuq">PS : En faisant le konami code y'a une surprise qui vous attend</div>
+
+<script>
+//Haut, haut, bas, bas, gauche, droite, gauche, droite, B, A
+var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+n = 0;
+$(document).keydown(function (e) {
+    if (e.keyCode === k[n++]) {
+        if (n === k.length) {
+            alert('Bien tenté, poisson de avril!'); // à remplacer par votre code
+            n = 0;
+            return false;
+        }
+    }
+    else {
+        n = 0;
+    }
+});
+</script>
+
+
+</div>
+
+
+</body>
+
+
+
+
+
+</html>
