@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>STOPWATCH TEST</title>
+    <script>
+            var time = 0;
+            var timego = 0;
+        </script>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet"> 
+    <style>
+    body {
+        background-color: green
+    }
+    p {
+        font-family: 'M PLUS 1p', sans-serif;
+        color : white;
+    }
+    h1 {
+        font-family: 'M PLUS 1p', sans-serif;
+        color : white;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            function timestart() {
+                    time = time + 1;
+                    $( "div.timer" ).replaceWith( '<div class="timer">' + time + '</div>' );
+            }
+
+    function startnow() {
+        theTimer = setInterval(timestart, 1000);
+    }
+    function stopnow() {
+        clearInterval(theTimer);
+    }
+    function resetnow() {
+        clearInterval(theTimer);
+        timego = 0;
+        time = 0;
+        $( "div.timer" ).replaceWith( '<div class="timer">' + time + '</div>' );
+    }
+    </script>
+</head>
+<body><p>
+<h1>StopWatch</h1>
+<h1><div class="timer">0</div></h1>
+<button onclick="startnow()">Start Timer</button>
+<button onclick="stopnow()">Stop</button>
+<button onclick="resetnow()">Reset</button>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+        
+</script>
+</p>
+</body>
+</html>
