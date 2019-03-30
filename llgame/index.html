@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <title>LL Le Jeu</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <style>
+        body{
+            background: #283c86;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            margin:0;
+        }
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <style>
+        #text{
+            font-family: 'Roboto', sans-serif;
+            color:white
+        }
+        h1{
+            font-family: 'Roboto', sans-serif;
+            color:white
+        }
+        h2{
+            font-family: 'Roboto', sans-serif;
+            color:white
+        }
+        .centrer {
+            text-align: center;
+        }
+        .navbar {
+            background-color: green;
+            color: white;
+            width:100%;
+            text-align:center;
+            padding: 10px;
+            top: 0;
+            text-decoration: none;
+            margin:0;
+            position:fixed;
+        }
+        .navbar a{
+            padding: 10px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none
+        }
+        #m0{
+            margin:0;
+        }
+        #img{
+            max-width: 100%;
+            height: auto;
+        }
+        .marginnavbar{
+            padding-top: 77px;
+        }
+        .btnsnps {
+            background: #ffbb00;
+            background-image: -webkit-linear-gradient(top, #ffbb00, #ffb921);
+            background-image: -moz-linear-gradient(top, #ffbb00, #ffb921);
+            background-image: -ms-linear-gradient(top, #ffbb00, #ffb921);
+            background-image: -o-linear-gradient(top, #ffbb00, #ffb921);
+            background-image: linear-gradient(to bottom, #ffbb00, #ffb921);
+            -webkit-border-radius: 28;
+            -moz-border-radius: 28;
+            border-radius: 28px;
+            -webkit-box-shadow: 4px 5px 0px #666666;
+            -moz-box-shadow: 4px 5px 0px #666666;
+            box-shadow: 4px 5px 0px #666666;
+            font-family: Arial;
+            color: #0d540a;
+            font-size: 20px;
+            padding: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btnsnps:hover {
+            background: #fff700;
+            background-image: -webkit-linear-gradient(top, #fff700, #ffee00);
+            background-image: -moz-linear-gradient(top, #fff700, #ffee00);
+            background-image: -ms-linear-gradient(top, #fff700, #ffee00);
+            background-image: -o-linear-gradient(top, #fff700, #ffee00);
+            background-image: linear-gradient(to bottom, #fff700, #ffee00);
+            text-decoration: none;
+        }
+        .transitiondlamortquitue{
+            pointer-events: none;
+            opacity:0;
+            width:100%;
+            height:100%;
+            position:fixed;
+            background-color:white;
+            z-index:999
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+            function spoilz(){
+                var aaaa = confirm('Es tu sur de vouloir te spoiler le jeu en avance?')
+                    if (aaaa == true) {
+                        var transition1 = 0.1
+                        var transitionfin1 = 1
+                        var transitioninterval = setInterval(function(){
+                            $(".transitiondlamortquitue").css("opacity", transition1)
+                            transition1 = transition1 + 0.1
+                            transitionfin1 = transitionfin1 + 1
+                            if (transitionfin1 == 20){
+                                alert("Vous avez décidé d'être spoilé.")
+                                window.location.href = "https://scratch.mit.edu/users/LLDeluxeLabo/"
+                            }
+                        }, 50);
+                    } else {
+                        alert("Ah?")
+                    }
+            }
+        </script>
+        <div class="transitiondlamortquitue"></div>
+        <div class="navbar">
+            <h1 id="m0">LL Le Jeu</h1>
+            <a href="">Accueil</a>
+            <a href="">Bonus</a>
+        </div>
+        <div class="marginnavbar"></div>
+        <div class="centrer">
+            <div id="text">
+                <h1>LL est de retour!</h1>
+                <img id="img" src="imgs/llart1.png">
+                <h2>Dans LL le jeu<br>
+                Empecher les pollutiobots<br>
+                De détruire votre planète!<br>
+                (Oui, je parle bien de la<br>
+                Planète Terre)</h2>
+                <br><br>
+                <h2>Des niveaux époustouflant!<br>
+                    De l'aventure!<br>
+                    Des ennemis et des amis!
+                </h2>
+                <br>
+                <h2>Tu peut même avoir le jeu<br>
+                en avance durant son développement:</h2>
+                <a class="btnsnps" onclick="spoilz()">Snapshots/WIP</a>
+                <br><br><br>
+                <h2 id="m0">Qu'en avez vous pensé?</h2>
+                <br>Nos experts en jeu vidéo<br>
+                ont testé le jeu, voici ce<br>
+                qu'ils en conclut<br>
+                <br><b>La boite en carton dit :</b>
+                <br>"C'est qui le mec au cheveux vert?"
+                <br>
+                <br><b>Mister Bruit dit :</b>
+                <br>"C PA EN 3D!!!!!"
+                <br><br>
+                On conclu que la majorité de<br>
+                nos experts ont aimé le jeu!
+                <br><br><br><br><br>
+                <script>
+                var allowedKeys = {
+                        37: 'left',
+                        38: 'up',
+                        39: 'right',
+                        40: 'down',
+                        65: 'a',
+                        66: 'b'
+                        };
+
+                        // the 'official' Konami Code sequence
+                        var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+                        // a variable to remember the 'position' the user has reached so far.
+                        var konamiCodePosition = 0;
+
+                        // add keydown event listener
+                        document.addEventListener('keydown', function(e) {
+                        // get the value of the key code from the key map
+                        var key = allowedKeys[e.keyCode];
+                        // get the value of the required key from the konami code
+                        var requiredKey = konamiCode[konamiCodePosition];
+
+                        // compare the key with the required key
+                        if (key == requiredKey) {
+
+                            // move to the next key in the konami code sequence
+                            konamiCodePosition++;
+
+                            // if the last key is reached, activate cheats
+                            if (konamiCodePosition == konamiCode.length) {
+                            activateCheats();
+                            konamiCodePosition = 0;
+                            }
+                        } else {
+                            konamiCodePosition = 0;
+                        }
+                        });
+
+                        function activateCheats() {
+                            alert("Tu a entré le konami code! Tu gagne le droit d'avoir la page a l'envers!")
+                            $("body").css("transform", "rotate(180deg)")
+                        }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
